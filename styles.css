@@ -77,8 +77,9 @@ section{padding:96px 0}
   font-size:13px;font-weight:600;
   letter-spacing:.18em;text-transform:uppercase;
   text-decoration:none;
-  padding:16px 32px;
+  padding:16px 34px;
   border:1px solid transparent;
+  border-radius:999px;
   transition:background .25s,color .25s,border-color .25s;
   cursor:pointer;
 }
@@ -88,7 +89,7 @@ section{padding:96px 0}
 .btn-outline-cream:hover{border-color:var(--cream);background:rgba(244,237,224,.08)}
 .btn-outline-teal{border-color:var(--teal);color:var(--teal)}
 .btn-outline-teal:hover{background:var(--teal);color:var(--cream)}
-.btn:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+.btn:focus-visible{outline:2px solid var(--copper);outline-offset:3px;border-radius:999px}
 a:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
 
 /* ---------- header ---------- */
@@ -135,7 +136,7 @@ header{
 .nav-links a[aria-current="page"]{
   opacity:1;border-bottom-color:var(--copper);
 }
-.nav .btn{padding:13px 26px;flex:none}
+.nav .btn{padding:13px 28px;flex:none}
 
 /* ---------- landing hero ---------- */
 /* DESIGNER NOTE: replace the layered gradient with the real golden-hour
@@ -428,8 +429,27 @@ footer{
 
 /* privacy page */
 .legal{max-width:720px}
-.legal h2{font-size:28px;margin:40px 0 12px}
+.legal h2{
+  font-size:26px;margin:44px 0 12px;
+  padding-top:22px;border-top:1px solid var(--cream-line);
+}
 .legal p{color:var(--teal-soft);margin-bottom:14px;font-size:15px}
+.legal ul{margin:0 0 18px;padding-left:0;list-style:none}
+.legal li{
+  position:relative;padding-left:22px;margin-bottom:9px;
+  color:var(--teal-soft);font-size:15px;line-height:1.65;
+}
+.legal li::before{
+  content:"";position:absolute;left:2px;top:11px;
+  width:6px;height:6px;background:var(--copper);transform:rotate(45deg);
+}
+.legal a{color:var(--teal);text-decoration:none;border-bottom:1px solid var(--copper)}
+.legal a:hover{color:var(--copper)}
+.legal-meta{
+  font-size:14px;padding-bottom:22px;
+  border-bottom:1px solid var(--cream-line);
+}
+.legal-meta strong{color:var(--teal);font-weight:600}
 
 /* ---------- responsive ---------- */
 @media (max-width:1020px){
@@ -512,7 +532,7 @@ header.scrolled .wordmark .wm-sub{font-size:9px}
 .mobile-menu a[aria-current="page"]{color:var(--copper-soft)}
 .mobile-menu .btn{
   margin-top:24px;text-align:center;border-bottom:0;display:block;
-  font-size:13px;font-weight:600;
+  font-size:13px;font-weight:600;border-radius:999px;
 }
 body.menu-open{overflow:hidden}
 
@@ -528,7 +548,7 @@ body.menu-open{overflow:hidden}
 .skip{
   position:absolute;left:-9999px;top:0;z-index:100;
   background:var(--copper-text);color:var(--cream);
-  padding:12px 22px;font-size:13px;font-weight:600;
+  padding:12px 22px;border-radius:999px;font-size:13px;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
 }
 .skip:focus{left:0}
